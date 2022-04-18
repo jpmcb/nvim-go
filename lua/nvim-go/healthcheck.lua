@@ -1,9 +1,10 @@
 --[[
 
-Need to execute healthcheck to ensure
+Need to execute healthcheck to ensure:
 
 * go is installed
+* At the root of a go.mod file
 * gopls is installed and running
-* expected completions library is installed
+* go tools (gofmt etc.) installed
 
 --]]

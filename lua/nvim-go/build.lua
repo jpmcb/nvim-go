@@ -15,7 +15,18 @@ local function build()
 	vim.cmd(command)
 end
 
+local function install()
+	local command = ':! go install'
+	vim.cmd(command)
+end
+
+local function test()
+	local command = ':! go test ./...'
+	vim.cmd(command)
+end
 
 return {
-	build = build
+	build = build,
+	install = install,
+	test = test
 }
