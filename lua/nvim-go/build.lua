@@ -1,10 +1,12 @@
+local M = {}
+
 -- TODO: make build tags configurable for user
 local function getBuildTags()
 	return ''
 end
 
 -- TODO: Sharp UX. No way to know if it was successful
-local function build()
+function M.build()
 	local command = ':! go build'
 	local tags = getBuildTags()
 
@@ -15,18 +17,12 @@ local function build()
 	vim.cmd(command)
 end
 
-local function install()
+function M.install()
 	local command = ':! go install'
 	vim.cmd(command)
 end
 
-local function test()
-	local command = ':! go test ./...'
-	vim.cmd(command)
-end
+-- Create and serve a coverage profile
+-- Command to "refactor into function"
 
-return {
-	build = build,
-	install = install,
-	test = test
-}
+return M

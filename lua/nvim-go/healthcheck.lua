@@ -8,3 +8,11 @@ Need to execute healthcheck to ensure:
 * go tools (gofmt etc.) installed
 
 --]]
+
+local M = {}
+
+function M.is_cover_installed()
+	return true
+end
+
+return M
